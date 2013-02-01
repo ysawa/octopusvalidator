@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 require 'spec_helper'
 
-describe "validators/validte" do
+describe "validators/validate" do
   before(:each) do
     @validator = Validator.new(
       :name => "Name",
