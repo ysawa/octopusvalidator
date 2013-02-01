@@ -2,6 +2,6 @@
 
 = render 'form'
 
-= link_to 'Show', @validator
-\|
-= link_to 'Back', validators_path
+.form-actions
+  = link_to 'Show', @validator, class: %w(btn btn-primary)
+  = link_to 'Back', validators_path, class: %w(btn)

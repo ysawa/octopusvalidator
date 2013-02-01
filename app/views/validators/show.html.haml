@@ -1,5 +1,3 @@
-%p#notice= notice
-
 %p
   %b Name:
   = @validator.name
@@ -10,6 +8,6 @@
   %b Content:
   = @validator.content
 
-= link_to 'Edit', edit_validator_path(@validator)
-\|
-= link_to 'Back', validators_path
+.form-actions
+  = link_to 'Edit', edit_validator_path(@validator), class: %w(btn btn-primary)
+  = link_to 'Back', validators_path, class: %w(btn)
