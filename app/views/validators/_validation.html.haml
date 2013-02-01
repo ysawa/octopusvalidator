@@ -10,6 +10,7 @@
       - validators.each do |validator|
         - result = validator.format
         - result = result.gsub('%e', CGI.escape(href))
+        - result = result.gsub('%u', href)
         %li
           %p
             %strong
