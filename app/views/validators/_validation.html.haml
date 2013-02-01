@@ -9,7 +9,7 @@
     %ul
       - validators.each do |validator|
         - result = validator.format
-        - result = result.gsub('%e', URI.encode(href))
+        - result = result.gsub('%e', CGI.escape(href))
         %li
           %strong
             = link_to validator.name, result, target: :_blank
