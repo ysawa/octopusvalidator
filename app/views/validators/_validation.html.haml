@@ -1,0 +1,24 @@
+- if params[:validator_ids]
+  - validator_ids = params[:validator_ids].collect { |id| id.to_i }
+- else
+  - validator_ids = []
+- href = params[:href]
+- if href.present?
+  - validators = Validator.find(validator_ids)
+  - if validators.present?
+    %ul
+      - validators.each do |validator|
+        - result = validator.format
+        - result = result.gsub('%e', URI.encode(href))
+        %li
+          %strong
+            = link_to validator.name, result, target: :_blank
+          = validator.content
+  - else
+    %p
+      %strong
+        No validator selected.
+- else
+  %p
+    %strong
+      Input valid URL.
