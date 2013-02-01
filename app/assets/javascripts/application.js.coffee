@@ -14,3 +14,13 @@
 #= require jquery_ujs
 #= require twitter/bootstrap
 #= require_tree .
+
+$ ->
+  $('ul#validators.auto li').each ->
+    href = $(this).find('a').attr('href')
+    iframe = $('<iframe>')
+    iframe.attr(
+      src: href
+    )
+    $(this).append(iframe)
+    null

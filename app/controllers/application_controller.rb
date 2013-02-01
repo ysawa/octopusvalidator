@@ -5,7 +5,10 @@ class ApplicationController < ActionController::Base
 
 protected
 
-  def reset_session_validator_ids
+  def reset_session_values
     session[:validator_ids] ||= []
+    if session[:auto].nil?
+      session[:auto] = false
+    end
   end
 end

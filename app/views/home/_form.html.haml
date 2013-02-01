@@ -17,8 +17,13 @@
         - check_box_id = "validator_id_#{validator_id}"
         - checked = validator_ids.include?(validator_id)
         %label.checkbox.inline{ for: check_box_id }
-          = check_box_tag 'validator_ids[]', validator_id, checked, id: check_box_id
+          = check_box_tag 'v[]', validator_id, checked, id: check_box_id
           = validator.name
+
+  .control-group.field
+    = label_tag :auto, 'Automatically validate', class: %w(control-label)
+    .controls
+      = check_box_tag :auto, 1, session[:auto]
 
   .form-actions
     = submit_tag 'Validate', class: %w(btn btn-primary)
