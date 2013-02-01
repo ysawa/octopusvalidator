@@ -1,0 +1,22 @@
+%h1 Listing validators
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th Name
+      %th Format
+      %th
+      %th
+      %th
+
+  %tbody
+    - @validators.each do |validator|
+      %tr
+        %td= validator.name
+        %td= validator.format
+        %td= link_to 'Show', validator
+        %td= link_to 'Edit', edit_validator_path(validator)
+        %td= link_to 'Destroy', validator, method: :delete, data: { confirm: 'Are you sure?' }
+
+.form-actions
+  = link_to 'New Validator', new_validator_path, class: %w(btn btn-primary)
