@@ -31,5 +31,8 @@ describe ValidatorsController do
       delete("/validators/1").should route_to("validators#destroy", :id => "1")
     end
 
+    it "routes to #validate" do
+      get("/validate").should route_to("validators#validate")
+    end
   end
 end

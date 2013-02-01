@@ -1,0 +1,29 @@
+= form_tag validate_path, { class: %w(form-horizontal), method: :get } do
+  .control-group.field
+    = label_tag :href, 'Your Site URL', class: %w(control-label)
+    .controls
+      = text_field_tag :href, params[:href], class: %w(input-block-level), placeholder: 'http://example.com'
+
+  .control-group.field
+    = label_tag :validators, 'Validators', class: %w(control-label)
+    .controls
+      - validators = Validator.all.to_a
+      - if session[:validator_ids].present?
+        - validator_ids = session[:validator_ids].collect { |id| id.to_i }
+      - else
+        - validator_ids = validators[0, 3].collect { |validator| validator.id }
+      - validators.each do |validator|
+        - validator_id = validator.id
+        - check_box_id = "validator_id_#{validator_id}"
+        - checked = validator_ids.include?(validator_id)
+        %label.checkbox.inline{ for: check_box_id }
+          = check_box_tag 'v[]', validator_id, checked, id: check_box_id
+          = validator.name
+
+  .control-group.field
+    = label_tag :auto, 'Automatically validate', class: %w(control-label)
+    .controls
+      = check_box_tag :auto, 1, session[:auto]
+
+  .form-actions
+    = submit_tag 'Validate', class: %w(btn btn-primary)

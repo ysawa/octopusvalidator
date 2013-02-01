@@ -1,0 +1,23 @@
+- if session[:validator_ids]
+  - validator_ids = session[:validator_ids].collect { |id| id.to_i }
+- else
+  - validator_ids = []
+- href = params[:href]
+- if href.present?
+  - validators = Validator.find(validator_ids)
+  - if validators.present?
+    %ul#validators{ class: (session[:auto] ? :auto : nil) }
+      - validators.each do |validator|
+        - result = validator.format
+        - result = result.gsub('%e', CGI.escape(href))
+        %li
+          %p
+            %strong
+              = link_to validator.name, result, target: :_blank
+            = validator.content
+  - else
+    %p.invalid
+      No validator selected.
+- else
+  %p.invalid
+    Input valid URL.
