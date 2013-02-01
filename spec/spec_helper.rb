@@ -12,6 +12,7 @@ Spork.prefork do
   require File.expand_path("../../config/environment", __FILE__)
   require 'rspec/rails'
   require 'capybara/rspec'
+  require 'database_cleaner'
 
   Capybara.javascript_driver = :webkit
 
@@ -26,6 +27,7 @@ Spork.prefork do
     # config.fixture_path = "#{::Rails.root}/spec/fixtures"
     config.before(:each) do
       FakeWeb.allow_net_connect = %r[^https?://(localhost|127\.0\.0\.1)]
+      DatabaseCleaner.start
     end
 
     config.after(:each) do
@@ -33,6 +35,12 @@ Spork.prefork do
       tmp_directory = File.join(Rails.root, "public/uploads/tmp")
       FileUtils.rm_rf(tmp_directory) if File.directory?(tmp_directory)
       FakeWeb.clean_registry
+      DatabaseCleaner.clean
+    end
+
+    config.before(:suite) do
+      DatabaseCleaner.strategy = :transaction
+      DatabaseCleaner.clean_with(:truncation)
     end
 
     # To test features using authentication
