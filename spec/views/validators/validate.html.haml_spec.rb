@@ -3,11 +3,7 @@ require 'spec_helper'
 
 describe "validators/validate" do
   before(:each) do
-    @validator = Validator.new(
-      :name => "Name",
-      :format => "Format",
-      :content => "MyText"
-    )
+    @validator = Fabricate(:validator)
   end
 
   it "renders" do
