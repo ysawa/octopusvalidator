@@ -38,12 +38,6 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-group :test do
-  # Pretty printed test output
-  gem 'turn', require: false
-  gem 'capybara-webkit' if RUBY_PLATFORM =~ /darwin/i # mac os x
-end
-
 group :development, :test do
   gem 'fakeweb'
   gem 'rspec-rails'
@@ -71,6 +65,7 @@ group :development, :test do
 end
 
 # Deploy with Capistrano
+
 group :deployment do
   gem 'capistrano'
   gem 'capistrano_colors'
