@@ -53,4 +53,9 @@ class ValidatorsController < ApplicationController
       render :edit
     end
   end
+
+  # GET /validate
+  def validate
+    @href = params[:href]
+  end
 end

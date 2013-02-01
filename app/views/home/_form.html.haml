@@ -1,0 +1,7 @@
+= form_tag validate_path, { class: %w(form-horizontal), method: :get } do
+  .control-group.field
+    = label_tag :href, 'Your Site URL', class: %w(control-label)
+    .controls
+      = text_field_tag :href, params[:href], class: %w(input-block-level)
+  .form-actions
+    = submit_tag 'Validate', class: %w(btn btn-primary)
