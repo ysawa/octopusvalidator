@@ -2,6 +2,7 @@
 
 class ValidatorsController < ApplicationController
   respond_to :html
+  before_filter :reset_session_validator_ids, only: %w(validate)
 
   # POST /validators
   def create
@@ -57,5 +58,8 @@ class ValidatorsController < ApplicationController
   # GET /validate
   def validate
     @href = params[:href]
+    if params[:validator_ids]
+      session[:validator_ids] = params[:validator_ids].collect { |id| id.to_i }
+    end
   end
 end
