@@ -2,6 +2,6 @@
   .control-group.field
     = label_tag :href, 'Your Site URL', class: %w(control-label)
     .controls
-      = text_field_tag :href, params[:href], class: %w(input-block-level)
+      = text_field_tag :href, params[:href], class: %w(input-block-level), placeholder: 'http://example.com'
   .form-actions
     = submit_tag 'Validate', class: %w(btn btn-primary)
