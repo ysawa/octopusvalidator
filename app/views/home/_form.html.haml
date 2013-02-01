@@ -7,15 +7,17 @@
   .control-group.field
     = label_tag :validators, 'Validators', class: %w(control-label)
     .controls
-      - if session[:validator_ids]
+      - validators = Validator.all.to_a
+      - if session[:validator_ids].present?
         - validator_ids = session[:validator_ids].collect { |id| id.to_i }
       - else
-        - validator_ids = []
-      - Validator.all.each do |validator|
+        - validator_ids = validators[0, 3].collect { |validator| validator.id }
+      - validators.each do |validator|
         - validator_id = validator.id
         - check_box_id = "validator_id_#{validator_id}"
+        - checked = validator_ids.include?(validator_id)
         %label.checkbox.inline{ for: check_box_id }
-          = check_box_tag 'validator_ids[]', validator_id, validator_ids.include?(validator_id), id: check_box_id
+          = check_box_tag 'validator_ids[]', validator_id, checked, id: check_box_id
           = validator.name
 
   .form-actions

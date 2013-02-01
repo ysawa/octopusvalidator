@@ -6,7 +6,7 @@
 - if href.present?
   - validators = Validator.find(validator_ids)
   - if validators.present?
-    %ul
+    %ul#validators
       - validators.each do |validator|
         - result = validator.format
         - result = result.gsub('%e', CGI.escape(href))
