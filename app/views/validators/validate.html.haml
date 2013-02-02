@@ -1,8 +1,9 @@
 - if @href.present?
-  - title = "Results: #{@href}"
+  - title = @href
 - else
-  - title = 'Results: No site URL'
+  - title = 'No site URL'
 %h1
+  %span.icon-hand-right
   = title
 
 = render 'validation'
