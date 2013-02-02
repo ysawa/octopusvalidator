@@ -19,11 +19,16 @@
         %label.checkbox{ for: check_box_id }
           = check_box_tag 'v[]', validator_id, checked, id: check_box_id
           = validator.name
+          %span.muted
+            \-
+            = truncate validator.content, length: 80
 
   .control-group.field
     = label_tag :auto, 'Automatically validate', class: %w(control-label)
     .controls
-      = check_box_tag :auto, 1, session[:auto]
+      = label_tag :auto do
+        = check_box_tag :auto, 1, session[:auto]
+        %span.text-info= "(Recommended: use <iframe> and see results instantly.)"
 
   .form-actions
-    = submit_tag 'Validate', class: %w(btn btn-primary)
+    = submit_tag 'Validate', class: %w(btn btn-primary btn-large)
