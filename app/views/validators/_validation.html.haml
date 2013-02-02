@@ -16,8 +16,9 @@
             %strong
               %span.icon-forward
               = link_to validator.name, result, target: :_blank
-            \-
-            = validator.content
+            %span.muted
+              \-
+              = validator.content
   - else
     %p.invalid
       No validator selected.
