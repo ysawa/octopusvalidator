@@ -5,6 +5,7 @@
     %tr
       %th Name
       %th Format
+      %th Priority
       %th
       %th
       %th
@@ -14,6 +15,7 @@
       %tr
         %td= validator.name
         %td= validator.format
+        %td= validator.priority
         %td= link_to 'Show', validator
         %td= link_to 'Edit', edit_validator_path(validator)
         %td= link_to 'Destroy', validator, method: :delete, data: { confirm: 'Are you sure?' }
