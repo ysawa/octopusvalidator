@@ -12,6 +12,7 @@
 #
 #= require jquery
 #= require jquery_ujs
+#= require jquery.backstrech
 #= require twitter/bootstrap
 #= require_tree .
 
@@ -24,3 +25,4 @@ $ ->
     )
     $(this).append(iframe)
     null
+  $.backstretch("http://dl.dropbox.com/u/515046/www/garfield-interior.jpg");
