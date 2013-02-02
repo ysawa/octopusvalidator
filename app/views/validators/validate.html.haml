@@ -1,14 +1,14 @@
 - if @href.present?
-  - title = @href
+  - title = "Results: #{@href}"
 - else
-  - title = 'No site URL'
+  - title = 'Results: No site URL'
 %h1
   = title
 
 = render 'validation'
 
 %h2
-  Validate next site
+  Validate a next website
 = render 'home/form'
 
 = content_for :title do
