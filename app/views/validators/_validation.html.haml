@@ -14,7 +14,9 @@
         %li
           %p
             %strong
+              %span.icon-forward
               = link_to validator.name, result, target: :_blank
+            \-
             = validator.content
   - else
     %p.invalid
