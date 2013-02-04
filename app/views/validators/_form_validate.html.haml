@@ -5,9 +5,9 @@
       = text_field_tag :href, params[:href], class: %w(input-block-level), placeholder: 'http://example.com'
 
   .control-group.field
-    = label_tag :validators, 'Validators', class: %w(control-label)
+    - validators = Validator.all.to_a
+    = label_tag "validator_id_#{validators.first.id}", 'Validators', class: %w(control-label)
     .controls
-      - validators = Validator.all.to_a
       - if session[:validator_ids].present?
         - validator_ids = session[:validator_ids].collect { |id| id.to_i }
       - else
