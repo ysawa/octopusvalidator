@@ -21,7 +21,8 @@
 %link{ href: asset_path("favicon.ico"), rel:"shortcut icon" }
 %meta{ content: title, property: "og:title" }
 %meta{ content: description, property: "og:description" }
-%meta{ content: asset_url("facebook-icon.png"), property: "og:image" }
+- facebook_image = "#{request.protocol}#{request.host_with_port}#{asset_path("facebook-icon.png")}"
+%meta{ content: facebook_image, property: "og:image" }
 - here_params = params.dup
 - here_params.delete('utf8')
 - here_params.delete('commit')
