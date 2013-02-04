@@ -10,6 +10,9 @@
 %p
   %b Priority:
   = @validator.priority
+%p
+  %b Iframe:
+  = @validator.iframe
 
 .form-actions
   = link_to 'Edit', edit_validator_path(@validator), class: %w(btn btn-primary)

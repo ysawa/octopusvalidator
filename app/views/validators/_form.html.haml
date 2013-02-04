@@ -22,6 +22,10 @@
     = f.label :priority, nil, class: %w(control-label)
     .controls
       = f.text_field :priority, class: %w(input-block-level)
+  .control-group.field
+    = f.label :iframe, nil, class: %w(control-label)
+    .controls
+      = f.check_box :iframe, {}, 1, 0
   .form-actions
     = f.submit 'Save', class: %w(btn btn-primary)
     = link_to 'Back', validators_path, class: %w(btn)
