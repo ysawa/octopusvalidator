@@ -4,8 +4,9 @@ require 'spec_helper'
 
 describe ValidatorsController do
 
-  def valid_attributes
-    { "name" => "W3C Validation", "href" => "http://validator.w3.org/check?uri=%e", content: 'W3C Validation', "priority" => 1 }
+  def valid_attributes(attributes = {})
+    attrs = { "name" => "W3C Validation", "href" => "http://validator.w3.org/check?uri=%e", content: 'W3C Validation', "priority" => 1 }
+    attrs.merge attributes.stringify_keys
   end
 
   describe "GET index" do
