@@ -8,14 +8,12 @@
   - if validators.present?
     %ul#validators{ class: (session[:auto] ? :auto : nil) }
       - validators.each do |validator|
-        - result = validator.format
-        - result = result.gsub('%e', CGI.escape(href))
-        - result = result.gsub('%u', href)
+        - validator_href = validator_format_url validator.format, href
         %li
           %p
             %strong
               %span.icon-forward
-              = link_to validator.name, result, target: :_blank
+              = link_to validator.name, validator_href, target: :_blank
             %span.muted
               \-
               = validator.content
