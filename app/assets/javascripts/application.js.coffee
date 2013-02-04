@@ -17,7 +17,7 @@
 #= require_tree .
 
 $ ->
-  $('ul#validators.auto li').each ->
+  $('ul#validators.auto li.iframe').each ->
     href = $(this).find('a').attr('href')
     iframe = $('<iframe>')
     iframe.attr(

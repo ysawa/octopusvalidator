@@ -1,5 +1,5 @@
 class Validator < ActiveRecord::Base
-  attr_accessible :content, :format, :name, :priority
+  attr_accessible :content, :format, :name, :priority, :iframe
   default_scope order('priority ASC')
 
   after_initialize :initialize_priority
