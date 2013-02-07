@@ -8,7 +8,7 @@ protected
   def reset_session_values
     session[:validator_ids] ||= []
     if session[:auto].nil?
-      session[:auto] = false
+      session[:auto] = true
     end
   end
 end
