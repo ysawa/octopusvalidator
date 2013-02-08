@@ -7,3 +7,5 @@ OctopusValidator::Application.routes.draw do
   root to: "home#index"
 
 end
+
+ActionDispatch::Routing::Translator.translate_from_file('config/locales/routes.yml')

@@ -1,0 +1,198 @@
+ja:
+  date:
+    abbr_day_names:
+      - 日
+      - 月
+      - 火
+      - 水
+      - 木
+      - 金
+      - 土
+    abbr_month_names:
+      - ~
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+    day_names:
+      - 日曜日
+      - 月曜日
+      - 火曜日
+      - 水曜日
+      - 木曜日
+      - 金曜日
+      - 土曜日
+    formats:
+      default: "%Y/%m/%d"
+      form: "%Y/%m/%d"
+      long: "%Y年%m月%d日(%a)"
+      short: "%m/%d"
+      year_month: "%Y年%m月"
+    month_names:
+      - ~
+      - 1月
+      - 2月
+      - 3月
+      - 4月
+      - 5月
+      - 6月
+      - 7月
+      - 8月
+      - 9月
+      - 10月
+      - 11月
+      - 12月
+    order:
+      - !ruby/symbol year
+      - !ruby/symbol month
+      - !ruby/symbol day
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: 約1時間
+        other: "約%{count}時間"
+      about_x_months:
+        one: 約1ヶ月
+        other: "約%{count}ヶ月"
+      about_x_years:
+        one: "約%{count}年"
+        other: "約%{count}年"
+      half_a_minute: 30秒前後
+      less_than_x_minutes:
+        one: 1分以内
+        other: "%{count}分以内"
+      less_than_x_seconds:
+        one: 1秒以内
+        other: "%{count}秒以内"
+      over_x_years:
+        one: "%{count}年以上"
+        other: "%{count}年以上"
+      x_days:
+        one: 1日
+        other: "%{count}日"
+      x_minutes:
+        one: 1分
+        other: "%{count}分"
+      x_months:
+        one: 1ヶ月
+        other: "%{count}ヶ月"
+      x_seconds:
+        one: 1秒
+        other: "%{count}秒"
+  errors:
+    full_messages:
+      format: "%{attribute}%{message}"
+    messages:
+      accepted: を受諾してください。
+      already_confirmed: はすでに認証されています。ログインしてください。
+      blank: をご入力ください。
+      carrierwave_integrity_error: は画像ではありません。
+      carrierwave_processing_error: は適切に加工ができません。
+      check: をチェックしてください。
+      confirmation: が一致しません。
+      duplicated: が重複しています。
+      empty: をご入力ください。
+      equal_to: "は%{count}にしてください。"
+      even: は偶数にしてください。
+      exclusion: は予約されています。
+      expired: が切れています。
+      filter: を絞り込んでください。
+      greater_than: "は%{count}より大きい値にしてください。"
+      greater_than_or_equal_to: "は%{count}以上の値にしてください。"
+      include_japanese: に日本語を含めることは出来ません。
+      inclusion: に不正な内容が入っています。
+      invalid: に不正な内容が入っています。
+      invalid_state_number: の変更が不正です。
+      less_than: "は%{count}より小さい値にしてください。"
+      less_than_or_equal_to: "は%{count}以下の値にしてください。"
+      magazine_not_published: は未配信となっております
+      news_item_not_published: は非公開となっております
+      not_a_number: は数値でご入力ください。
+      not_an_integer: は整数でご入力ください。
+      not_correct: が正しくありません。
+      not_found: が見つかりません。
+      not_locked: がロックされていません。
+      not_saved:
+        one: "%{resource}は保存できませんでした。1つ修正してください。"
+        other: "%{resource}は保存できませんでした。%{count}つ修正してください。"
+      odd: は奇数にしてください。
+      password: をご入力ください。(6文字以上)
+      record_invalid: "バリデーションに失敗しました。 %{errors}"
+      select: を選択してください。
+      taken: はすでに登録されています。
+      too_long: "は%{count}文字以内でご入力ください。"
+      too_short: "は%{count}文字以上でご入力ください。"
+      unchecked: をチェックしてください。
+      upload: をアップロードしてください。
+      wrong_length: "は%{count}文字でご入力ください。"
+    template:
+      body: 次の項目を確認してください。
+      header:
+        one: 入力項目にエラーが発生しました。
+        other: 入力項目にエラーが発生しました。
+  names:
+    corporation:
+      honorific: "%{model}様"
+    member:
+      honorific: "%{model}様"
+  number:
+    currency:
+      format:
+        delimiter: ","
+        format: "%n%u"
+        precision: 0
+        separator: "."
+        unit: 円
+    format:
+      delimiter: ","
+      precision: 3
+      separator: "."
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: 件
+      format:
+        delimiter: ","
+        precision: 1
+      storage_units:
+        format: "%n%u"
+        units:
+          byte: バイト
+          gb: ギガバイト
+          kb: キロバイト
+          mb: メガバイト
+          tb: テラバイト
+    percentage:
+      format:
+        delimiter: ""
+    precision:
+      format:
+        delimiter: ""
+  support:
+    array:
+      last_word_connector: と
+      sentence_connector: と
+      skip_last_comma: true
+      two_words_connector: と
+      words_connector: と
+    select:
+      prompt: 選択してください。
+  time:
+    am: 午前
+    formats:
+      default: "%Y/%m/%d %H:%M"
+      form: "%Y/%m/%d %H:%M"
+      hour_minute: "%H:%M"
+      long: "%Y年%m月%d日(%a) %H:%M"
+      short: "%m/%d %H:%M"
+    pm: 午後
+

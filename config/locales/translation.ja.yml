@@ -1,0 +1,9 @@
+ja:
+  actions:
+    validate_more: 'もっと検査する'
+    validate_your_site: 'サイトを検査する'
+  helpers:
+    submit:
+      validate: '検査する'
+  site:
+    description: 'サイトを作りながら確認できるツールを作りました。バリデータでミスや見落としがちなポイントを把握することができます。IE6対応、SEO対策などにご活用ください。'
