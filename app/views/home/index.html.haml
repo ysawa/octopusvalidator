@@ -1,14 +1,9 @@
 .hero-unit
   %img#octopus{ src: asset_path('octopus.png'), alt: 'Octopus' }
   %h1 Octopus Validator
-  %p
-    You can validate your great websites being developed.
-    %br
-    Validators will check your mistakes and overlooked points very easily.
-    %br
-    Take advantage of those validators and create seamless websites!
+  = render 'welcome'
 
 %h2
   %span.icon-hand-right
-  Validate your site
+  = t('actions.validate_your_site')
 = render 'validators/form_validate'

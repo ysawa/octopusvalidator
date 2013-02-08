@@ -1,0 +1,8 @@
+ja:
+  actions:
+    validate_more: 'もっと検査する'
+    validate_your_site: 'サイトを検査する'
+  helpers:
+    submit:
+      validate: '検査する'
+

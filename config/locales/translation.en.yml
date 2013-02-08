@@ -1,0 +1,8 @@
+en:
+  actions:
+    validate_more: 'Validate more...'
+    validate_your_site: 'Validate your site'
+  helpers:
+    submit:
+      validate: 'Validate'
+
