@@ -5,4 +5,5 @@ en:
   helpers:
     submit:
       validate: 'Validate'
-
+  site:
+    description: "Octopus Validator enables you to validate your great websites being developed. Validators will check your mistakes and overlooked points very easily."
