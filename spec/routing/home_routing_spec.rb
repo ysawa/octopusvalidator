@@ -6,7 +6,7 @@ describe HomeController do
   describe "routing" do
 
     it "routes to #index" do
-      get("/").should route_to("home#index")
+      get("/").should route_to("home#index", locale: 'en')
     end
   end
 end
