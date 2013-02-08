@@ -5,5 +5,16 @@ ja:
   helpers:
     submit:
       validate: '検査する'
+  information:
+    auto_recommended: "オススメ。<iframe>を使って即座に結果を確認できます。"
+    automatically_validate: '自動的にバリデート'
+    your_site_url: 'サイトのURL'
   site:
     description: 'サイトを作りながら確認できるツールを作りました。バリデータでミスや見落としがちなポイントを把握することができます。IE6対応、SEO対策などにご活用ください。'
+
+  activerecord:
+    models:
+      validator: 'バリデータ'
+    attributes:
+      validator:
+

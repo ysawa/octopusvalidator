@@ -1,12 +1,12 @@
 = form_tag validate_path, { class: %w(form-horizontal), method: :get } do
   .control-group.field
-    = label_tag :href, 'Your site URL', class: %w(control-label)
+    = label_tag :href, t('information.your_site_url'), class: %w(control-label)
     .controls
       = text_field_tag :href, params[:href], class: %w(input-block-level), placeholder: 'http://example.com'
 
   .control-group.field
     - validators = Validator.all.to_a
-    = label_tag "validator_id_#{validators.first.id}", 'Validators', class: %w(control-label)
+    = label_tag "validator_id_#{validators.first.id}", Validator.model_name.human, class: %w(control-label)
     .controls
       - if session[:validator_ids].present?
         - validator_ids = session[:validator_ids].collect { |id| id.to_i }
@@ -24,11 +24,12 @@
             = truncate validator.content, length: 80
 
   .control-group.field
-    = label_tag :auto, 'Automatically validate', class: %w(control-label)
+    = label_tag :auto, t('information.automatically_validate'), class: %w(control-label)
     .controls
       = label_tag :auto do
         = check_box_tag :auto, 1, session[:auto]
-        %span.text-info= "(Recommended: use <iframe> and see results instantly.)"
+        %span.text-info
+          = t('information.auto_recommended')
 
   .form-actions
     = submit_tag t('helpers.submit.validate'), class: %w(btn btn-primary btn-large)
