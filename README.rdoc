@@ -4,4 +4,4 @@ You can validate your great websites being developed. Validators will check your
 
 == Heroku App
 
-http://octopusvalidator.herokuapp.com
+http://octovalid.info
