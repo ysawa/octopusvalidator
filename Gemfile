@@ -23,6 +23,8 @@ end
 gem 'pg'
 gem 'haml'
 gem 'jquery-rails'
+gem 'zepto-rails', github: 'frontfoot/zepto-rails'
+gem 'rails-behaviors'
 
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS

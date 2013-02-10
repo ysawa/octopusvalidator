@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/frontfoot/zepto-rails.git
+  revision: 4e1b4bc585e11d71adf8bb4bb3e3958dbc140061
+  specs:
+    zepto-rails (0.8.0)
+      rails (>= 3.1.0)
+
+GIT
   remote: git://github.com/johnbintz/guard-jasmine-headless-webkit.git
   revision: f86ec8b3b6e672ca6b3268de9054ed2cbedaa6a4
   specs:
@@ -177,6 +184,9 @@ GEM
       activesupport (= 3.2.11)
       bundler (~> 1.0)
       railties (= 3.2.11)
+    rails-behaviors (0.4.1)
+      coffee-script-source (~> 1.1)
+      sprockets (~> 2.0)
     rails-translate-routes (0.1.3)
       activesupport (>= 3.1)
     railties (3.2.11)
@@ -276,6 +286,7 @@ DEPENDENCIES
   less-rails
   pg
   rails (= 3.2.11)
+  rails-behaviors
   rails-translate-routes
   rb-fsevent
   rspec-rails
@@ -285,3 +296,4 @@ DEPENDENCIES
   therubyracer
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
+  zepto-rails!
